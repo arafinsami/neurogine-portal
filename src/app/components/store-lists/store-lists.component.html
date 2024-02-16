@@ -1,0 +1,63 @@
+<button class="btn btn-primary" style="position: fixed;margin-left: -850px; margin-top: 10px;" routerLink='/stores/store-save'>Create New</button>
+<div class="component-container">
+    <div id="schedule" class="mat-elevation-z8">
+        <div class="schedule-header">
+            <span></span>
+            <h3> Stores Lists </h3>
+        </div>
+        <form [formGroup]="goodsForm" (ngSubmit)="onSubmit()" class="cptu-form" style="width: 90%; margin: 0 auto;">
+            <div class="form-row">
+                <mat-label class="col-form-label">Name</mat-label>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Name</mat-label>
+                        <input type="text" matInput [formControl]="goodsForm.get('name')">
+                    </mat-form-field>
+                </div>
+                <mat-label class="ol-form-label">Category</mat-label>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Category</mat-label>
+                        <input type="text" matInput [formControl]="goodsForm.get('category')">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="button-part">
+                <button mat-raised-button color="primary">Search</button>
+                <button mat-raised-button color="warn" (click)="reloadCurrentRoute()">Reset</button>
+            </div>
+        </form>
+
+        <div>
+            <table mat-table [dataSource]="dataSource" matSort #storeSort="matSort">
+                    <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef> Information </th>
+                        <td mat-cell *matCellDef="let element">
+                            <img  style="width: 200px; height: 200px;" src="{{element.image}}" /><br>
+                            {{element.name}}<br>
+                            {{element.category}}<br>
+                            {{element.email}}<br>
+                            {{element.address}}<br>
+                            {{element.geolocation}}<br>
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="action">
+                        <th mat-header-cell *matHeaderCellDef style="width: 30%;"> Action </th>
+                        <mat-cell *matCellDef="let element" style="width: 30%;">
+                            <a [routerLink]="['/stores/store-edit/', element.id]" routerLinkActive="router-link-active"
+                                style="margin-right: 10px;">Edit</a>
+                            <a [routerLink]="['/stores/store-details/', element.id]" routerLinkActive="router-link-active"
+                                style="margin-right: 10px;">Details</a>
+                        </mat-cell>
+                    </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+            <mat-paginator #storesPaginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+                (page)="getNext($event)" showFirstLastButtons>
+            </mat-paginator>
+        </div>
+    </div>
+</div>

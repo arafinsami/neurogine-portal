@@ -1,0 +1,213 @@
+/* You can add global styles to this file, and also import other style files */
+/*@import "../node_modules/ngx-toastr/toastr.css"; */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  text-align: center;
+}
+
+.component-container {
+  margin: 0 auto;
+}
+
+.inner-container {
+  width: 80%;
+  margin: 5px auto;
+  padding: 30px 60px;
+  min-height: 500px;
+}
+
+.component-header {
+  color: #72c02c !important;
+  font-size: 32px !important;
+  margin: 30px 0 !important;
+}
+
+.col-1 {
+  width: 8.33%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-2 {
+  width: 16.66%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-3 {
+  width: 24.99%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-4 {
+  width: 33.32%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-5 {
+  width: 41.65%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-6 {
+  width: 49.98%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-7 {
+  width: 58.31%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-8 {
+  width: 66.64%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-9 {
+  width: 74.97%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-10 {
+  width: 83.3%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-11 {
+  width: 91.63%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-12 {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* style for mat table */
+.component-container {
+  margin: 0 auto;
+}
+table {
+  width: 100%;
+  text-align: left;
+}
+.mat-table th {
+  border-top: 1px solid #e0e0e0;
+}
+
+.mat-table th,
+.mat-table td {
+  border-right: 1px solid #e0e0e0;
+}
+
+tr td:first-child,
+th:first-child {
+  border-left: 1px solid #e0e0e0;
+}
+
+:host ::ng-deep td.mat-cell,
+:host ::ng-deep th.mat-header-cell,
+:host ::ng-deep .mat-cell {
+  text-align: center !important;
+}
+.mat-row:nth-child(even) {
+  background-color: #e4f0ec !important;
+}
+
+.mat-row:nth-child(odd) {
+  background-color: #ffffff;
+}
+.mat-header-row {
+  background-color: #e4f0ec !important;
+}
+.mat-header-cell,
+.mat-cell {
+  padding: 10px !important;
+}
+.mat-header-cell {
+  font-weight: bold;
+  font-size: 12px;
+}
+table {
+  width: 100%;
+  text-align: left;
+}
+
+/* common container style  */
+
+.schedule-header h3 {
+  color: #72c02c !important;
+  font-size: 24px;
+  /* margin: 10px; */
+}
+
+#schedule {
+  width: 90%;
+  margin: 5px auto;
+  padding: 10px;
+  min-height: 470px;
+}
+
+.form-row {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: 1fr 2fr 1fr 2fr;
+}
+
+.form-row mat-label {
+  align-self: baseline;
+  justify-self: end;
+}
+.cptu-form {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 965px) {
+  .form-row {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/* container media query */
+
+@media (max-width: 425px) {
+  .example-card {
+    width: 90% !important;
+    margin: 5% auto !important;
+  }
+
+
+}
+
+@media (max-width: 1024px) {
+  .search-marque-bar {
+    margin-top: 200px !important;
+}
+}
+
+marquee ul{
+  display: flex;
+}
+
+marquee ul li{
+  margin-left: 10px;
+}
